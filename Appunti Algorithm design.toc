@@ -1,0 +1,32 @@
+\contentsline {section}{\numberline {1}Stable Matching}{1}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}The Men-Wimen problem}{2}{subsection.1.1}% 
+\contentsline {section}{\numberline {2}Asymptotic Order of Growth}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Brute Force}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Polynomial Running Time}{3}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Big-O Notation}{3}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Common Running Times}{5}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.5}Why it Matters}{6}{subsection.2.5}% 
+\contentsline {subsection}{\numberline {2.6}The Heap Data Structure}{6}{subsection.2.6}% 
+\contentsline {section}{\numberline {3}Greedy Algorithms}{7}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}The Cashier Problem / Coin changing}{7}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Interval Scheduling}{7}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Interval Partitioning}{8}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Minimizing The Lateness}{9}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}Dikstra Algorithm}{10}{subsection.3.5}% 
+\contentsline {subsection}{\numberline {3.6}Kruskal Algorithm}{11}{subsection.3.6}% 
+\contentsline {section}{\numberline {4}Dynamic Programming}{13}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Weighted Interval Scheduling}{13}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Knapsack Problem}{15}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Sequence Alignment}{16}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}Bellman-Ford}{18}{subsection.4.4}% 
+\contentsline {section}{\numberline {5}Network Flow}{20}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}The Maximum Flow Problem}{20}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}The maximum flow/ minimum cut relationship}{20}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Ford-Fulkerson Algorithm}{21}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.4}Matching and Bipartite Matching}{22}{subsection.5.4}% 
+\contentsline {subsection}{\numberline {5.5}Edge Disjointed Paths}{23}{subsection.5.5}% 
+\contentsline {subsection}{\numberline {5.6}Circulation With demands}{24}{subsection.5.6}% 
+\contentsline {subsection}{\numberline {5.7}Survey Design}{26}{subsection.5.7}% 
+\contentsline {subsection}{\numberline {5.8}Airline Scheduling}{26}{subsection.5.8}% 
+\contentsline {subsection}{\numberline {5.9}Project Selection}{27}{subsection.5.9}% 
+\contentsline {subsection}{\numberline {5.10}Baseball Game}{27}{subsection.5.10}% 

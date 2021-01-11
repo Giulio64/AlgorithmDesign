@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.27)  6 JAN 2021 18:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.27)  10 JAN 2021 17:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -320,4 +320,861 @@ Package: relsize 2013/03/29 ver 4.1
 \algocf@hangingbox=\box35
 \algocf@untilbox=\box36
 \algocf@skipuntil=\skip60
-\alg
+\algocf@capbox=\box37
+\algocf@lcaptionbox=\skip61
+\algoheightruledefault=\skip62
+\algoheightrule=\skip63
+\algotitleheightruledefault=\skip64
+\algotitleheightrule=\skip65
+\c@algocfline=\count119
+\c@algocfproc=\count120
+\c@algocf=\count121
+\algocf@algoframe=\box38
+\algocf@algobox=\box39
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen132
+\captionmargin@=\dimen133
+\captionwidth=\dimen134
+\caption@tempdima=\dimen135
+\caption@indent=\dimen136
+\caption@parindent=\dimen137
+\caption@hangindent=\dimen138
+)
+\c@caption@flags=\count122
+\c@ContinuedFloat=\count123
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count124
+\c@subtable=\count125
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/spverbatim/spverbatim.sty
+Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count126
+\uc@combtoks=\toks23
+\uc@combtoksb=\toks24
+\uc@temptokena=\toks25
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip66
+\f@nch@O@elh=\skip67
+\f@nch@O@erh=\skip68
+\f@nch@O@olh=\skip69
+\f@nch@O@orh=\skip70
+\f@nch@O@elf=\skip71
+\f@nch@O@erf=\skip72
+\f@nch@O@olf=\skip73
+\f@nch@O@orf=\skip74
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/02/04 v3.8 Customized lists
+\labelindent=\skip75
+\enit@outerparindent=\dimen139
+\enit@toks=\toks28
+\enit@inbox=\box40
+\enit@count@id=\count127
+\enitdp@description=\count128
+)
+(./Appunti Algorithm design.aux)
+\openout1 = `"Appunti Algorithm design.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+
+(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count129
+\scratchdimen=\dimen140
+\scratchbox=\box41
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen141
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks30
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box42
+Package hyperref Info: Link coloring OFF on input line 40.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count135
+)
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
+
+(./Appunti Algorithm design.out) (./Appunti Algorithm design.out)
+\@outlinefile=\write4
+\openout4 = `"Appunti Algorithm design.out"'.
+
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(50.58878pt, 513.11745pt, 50.58878pt)
+* v-part:(T,H,B)=(50.58878pt, 693.79243pt, 50.58878pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=513.11745pt
+* \textheight=693.79243pt
+* \oddsidemargin=-21.68121pt
+* \evensidemargin=-21.68121pt
+* \topmargin=-58.68121pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+(./Appunti Algorithm design.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write5
+\openout5 = `"Appunti Algorithm design.toc"'.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+<images/GS.png, id=164, 353.32pt x 161.60374pt>
+File: images/GS.png Graphic file (type png)
+<use images/GS.png>
+Package pdftex.def Info: images/GS.png  used on input line 61.
+(pdftex.def)             Requested size: 205.24384pt x 93.87572pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/GS-Solved.png, id=166, 353.32pt x 161.60374pt>
+File: images/GS-Solved.png Graphic file (type png)
+<use images/GS-Solved.png>
+Package pdftex.def Info: images/GS-Solved.png  used on input line 67.
+(pdftex.def)             Requested size: 205.24384pt x 93.87572pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 13.59999pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+[2 <./images/GS.png> <./images/GS-Solved.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--144
+
+ []
+
+<images/on.png, id=193, 341.275pt x 288.07625pt>
+File: images/on.png Graphic file (type png)
+<use images/on.png>
+Package pdftex.def Info: images/on.png  used on input line 156.
+(pdftex.def)             Requested size: 205.24384pt x 173.25146pt.
+[3
+
+ <./images/on.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+
+ []
+
+<images/omega.png, id=201, 316.18124pt x 264.99pt>
+File: images/omega.png Graphic file (type png)
+<use images/omega.png>
+Package pdftex.def Info: images/omega.png  used on input line 177.
+(pdftex.def)             Requested size: 205.24384pt x 172.01501pt.
+<images/tight.png, id=202, 352.31625pt x 316.18124pt>
+File: images/tight.png Graphic file (type png)
+<use images/tight.png>
+Package pdftex.def Info: images/tight.png  used on input line 187.
+(pdftex.def)             Requested size: 205.24384pt x 184.19093pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
+
+ []
+
+[4 <./images/omega.png> <./images/tight.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
+
+ []
+
+<images/running.png, id=212, 1145.27875pt x 509.905pt>
+File: images/running.png Graphic file (type png)
+<use images/running.png>
+Package pdftex.def Info: images/running.png  used on input line 230.
+(pdftex.def)             Requested size: 359.18063pt x 159.91289pt.
+[5]
+<images/heap.png, id=217, 736.7525pt x 255.95625pt>
+File: images/heap.png Graphic file (type png)
+<use images/heap.png>
+Package pdftex.def Info: images/heap.png  used on input line 244.
+(pdftex.def)             Requested size: 359.18063pt x 124.78304pt.
+ [6 <./images/running.png> <./images/heap.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--268
+
+ []
+
+[7
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 342--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 433--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 447--451
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--451
+
+ []
+
+<images/dikstra.png, id=248, 1146.2825pt x 610.28pt>
+File: images/dikstra.png Graphic file (type png)
+<use images/dikstra.png>
+Package pdftex.def Info: images/dikstra.png  used on input line 454.
+(pdftex.def)             Requested size: 410.49551pt x 218.54593pt.
+[10
+
+ <./images/dikstra.png>]
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-3.def
+File: uni-3.def 2013/05/13 UCS: Unicode data U+0300..U+03FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 506--508
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 508--510
+
+ []
+
+
+Overfull \hbox (17.45222pt too wide) in paragraph at lines 512--514
+[]\OT1/cmr/bx/n/10.95 Claim \OT1/cmr/m/n/10.95 The Dik-stra Al-go-rithm com-ple
+x-ity, for a graph G=(V,E), us-ing a pri-or-ity queue is: $\OMS/cmsy/m/n/10.95 
+O[]$\OT1/cmr/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--514
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--518
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
+
+ []
+
+<images/kruskal.jpg, id=255, 578.16pt x 332.24126pt>
+File: images/kruskal.jpg Graphic file (type jpg)
+<use images/kruskal.jpg>
+Package pdftex.def Info: images/kruskal.jpg  used on input line 526.
+(pdftex.def)             Requested size: 205.24384pt x 117.94392pt.
+[11]
+<images/kruskal_solved.jpg, id=262, 578.16pt x 332.24126pt>
+File: images/kruskal_solved.jpg Graphic file (type jpg)
+<use images/kruskal_solved.jpg>
+Package pdftex.def Info: images/kruskal_solved.jpg  used on input line 532.
+(pdftex.def)             Requested size: 205.24384pt x 117.94392pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--567
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--574
+
+ []
+
+[12 <./images/kruskal.jpg> <./images/kruskal_solved.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--587
+
+ []
+
+<images/weighted.png, id=272, 954.56625pt x 506.89375pt>
+File: images/weighted.png Graphic file (type png)
+<use images/weighted.png>
+Package pdftex.def Info: images/weighted.png  used on input line 597.
+(pdftex.def)             Requested size: 359.18063pt x 190.72665pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--603
+
+ []
+
+[13
+
+ <./images/weighted.png>]
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 607.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
+
+ []
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 610.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
+
+ []
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-34.def
+File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
+)
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 659.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 681.
+
+[14]
+<images/knapsack.png, id=291, 277.035pt x 336.25626pt>
+File: images/knapsack.png Graphic file (type png)
+<use images/knapsack.png>
+Package pdftex.def Info: images/knapsack.png  used on input line 704.
+(pdftex.def)             Requested size: 102.62192pt x 124.55652pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 712--713
+
+ []
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 744.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 744.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 744.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 744.
+
+<images/knapsack2.png, id=292, 1120.185pt x 483.8075pt>
+File: images/knapsack2.png Graphic file (type png)
+<use images/knapsack2.png>
+Package pdftex.def Info: images/knapsack2.png  used on input line 754.
+(pdftex.def)             Requested size: 410.49551pt x 177.29327pt.
+[15 <./images/knapsack.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 758--759
+
+ []
+
+<images/sequence.png, id=301, 1114.1625pt x 495.8525pt>
+File: images/sequence.png Graphic file (type png)
+<use images/sequence.png>
+Package pdftex.def Info: images/sequence.png  used on input line 773.
+(pdftex.def)             Requested size: 307.8736pt x 137.01431pt.
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 777.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 777.
+
+<images/sequence2.png, id=302, 995.72pt x 475.7775pt>
+File: images/sequence2.png Graphic file (type png)
+<use images/sequence2.png>
+Package pdftex.def Info: images/sequence2.png  used on input line 781.
+(pdftex.def)             Requested size: 307.8736pt x 147.11198pt.
+[16 <./images/knapsack2.png> <./images/sequence.png>]
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 789.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 790.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 790.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 790.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 793.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 829.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 829.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 829.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 829.
+
+<images/bellman.png, id=313, 375.4025pt x 246.9225pt>
+File: images/bellman.png Graphic file (type png)
+<use images/bellman.png>
+Package pdftex.def Info: images/bellman.png  used on input line 850.
+(pdftex.def)             Requested size: 153.9368pt x 101.25394pt.
+[17 <./images/sequence2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 858--860
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--864
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 870--873
+
+ []
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 912.
+
+[18 <./images/bellman.png>] [19]
+<images/network1.png, id=336, 1040.88875pt x 564.1075pt>
+File: images/network1.png Graphic file (type png)
+<use images/network1.png>
+Package pdftex.def Info: images/network1.png  used on input line 923.
+(pdftex.def)             Requested size: 256.55872pt x 139.03816pt.
+<images/residual2.png, id=337, 481.8pt x 168.63pt>
+File: images/residual2.png Graphic file (type png)
+<use images/residual2.png>
+Package pdftex.def Info: images/residual2.png  used on input line 944.
+(pdftex.def)             Requested size: 153.9368pt x 53.87778pt.
+<images/residual1.png, id=338, 449.68pt x 178.6675pt>
+File: images/residual1.png Graphic file (type png)
+<use images/residual1.png>
+Package pdftex.def Info: images/residual1.png  used on input line 950.
+(pdftex.def)             Requested size: 153.9368pt x 61.16325pt.
+ [20
+
+ <./images/network1.png> <./images/residual2.png> <./images/residual1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 981--983
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--990
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1006--1008
+
+ []
+
+<images/matching.png, id=349, 733.74126pt x 509.905pt>
+File: images/matching.png Graphic file (type png)
+<use images/matching.png>
+Package pdftex.def Info: images/matching.png  used on input line 1019.
+(pdftex.def)             Requested size: 256.55872pt x 178.29047pt.
+[21]
+<images/bmatching.png, id=356, 661.47125pt x 469.755pt>
+File: images/bmatching.png Graphic file (type png)
+<use images/bmatching.png>
+Package pdftex.def Info: images/bmatching.png  used on input line 1027.
+(pdftex.def)             Requested size: 256.55872pt x 182.19304pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
+
+ []
+
+[22 <./images/matching.png> <./images/bmatching.png>]
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 1037.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 1037.
+
+<images/hall.png, id=365, 1144.275pt x 432.61626pt>
+File: images/hall.png Graphic file (type png)
+<use images/hall.png>
+Package pdftex.def Info: images/hall.png  used on input line 1041.
+(pdftex.def)             Requested size: 410.49551pt x 155.19383pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1049
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1057
+
+ []
+
+<images/disjointed.png, id=366, 951.555pt x 435.6275pt>
+File: images/disjointed.png Graphic file (type png)
+<use images/disjointed.png>
+Package pdftex.def Info: images/disjointed.png  used on input line 1061.
+(pdftex.def)             Requested size: 307.8736pt x 140.94577pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1068
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1070--1073
+
+ []
+
+[23
+
+ <./images/hall.png> <./images/disjointed.png>]
+<images/maxFlowDisjointed.png, id=375, 678.535pt x 269.005pt>
+File: images/maxFlowDisjointed.png Graphic file (type png)
+<use images/maxFlowDisjointed.png>
+Package pdftex.def Info: images/maxFlowDisjointed.png  used on input line 1076.
+
+(pdftex.def)             Requested size: 307.8736pt x 122.05266pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1088
+
+ []
+
+<images/circulation.png, id=376, 1082.0425pt x 402.50375pt>
+File: images/circulation.png Graphic file (type png)
+<use images/circulation.png>
+Package pdftex.def Info: images/circulation.png  used on input line 1100.
+(pdftex.def)             Requested size: 307.8736pt x 114.52437pt.
+[24 <./images/maxFlowDisjointed.png> <./images/circulation.png>]
+<images/maxFlowCirculation.png, id=385, 1092.08pt x 516.93124pt>
+File: images/maxFlowCirculation.png Graphic file (type png)
+<use images/maxFlowCirculation.png>
+Package pdftex.def Info: images/maxFlowCirculation.png  used on input line 1110
+.
+(pdftex.def)             Requested size: 307.8736pt x 145.72572pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1125
+
+ []
+
+<images/lowerbound.png, id=386, 927.465pt x 349.305pt>
+File: images/lowerbound.png Graphic file (type png)
+<use images/lowerbound.png>
+Package pdftex.def Info: images/lowerbound.png  used on input line 1128.
+(pdftex.def)             Requested size: 307.8736pt x 115.95323pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
+
+ []
+
+[25 <./images/maxFlowCirculation.png> <./images/lowerbound.png>]
+<images/survey.png, id=396, 935.495pt x 465.74pt>
+File: images/survey.png Graphic file (type png)
+<use images/survey.png>
+Package pdftex.def Info: images/survey.png  used on input line 1148.
+(pdftex.def)             Requested size: 307.8736pt x 153.27538pt.
+<images/airline.png, id=397, 1162.3425pt x 702.625pt>
+File: images/airline.png Graphic file (type png)
+<use images/airline.png>
+Package pdftex.def Info: images/airline.png  used on input line 1161.
+(pdftex.def)             Requested size: 307.8736pt x 186.10896pt.
+ [26 <./images/survey.png> <./images/airline.png>]
+<images/projects.png, id=406, 1010.77625pt x 731.73375pt>
+File: images/projects.png Graphic file (type png)
+<use images/projects.png>
+Package pdftex.def Info: images/projects.png  used on input line 1178.
+(pdftex.def)             Requested size: 307.8736pt x 222.88258pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1193
+
+ []
+
+<images/baseballFlow.png, id=407, 1094.0875pt x 570.13pt>
+File: images/baseballFlow.png Graphic file (type png)
+<use images/baseballFlow.png>
+Package pdftex.def Info: images/baseballFlow.png  used on input line 1196.
+(pdftex.def)             Requested size: 307.8736pt x 160.43565pt.
+[27 <./images/projects.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1203
+
+ []
+
+<images/baseballElimination.png, id=414, 1076.02pt x 615.29875pt>
+File: images/baseballElimination.png Graphic file (type png)
+<use images/baseballElimination.png>
+Package pdftex.def Info: images/baseballElimination.png  used on input line 121
+0.
+(pdftex.def)             Requested size: 307.8736pt x 176.04733pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1213.
+[28 <./images/baseballFlow.png> <./images/baseballElimination.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1213.
+
+(./Appunti Algorithm design.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1213.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1213.
+
+Package rerunfilecheck Info: File `"Appunti Algorithm design".out' has not chan
+ged.
+(rerunfilecheck)             Checksum: 9E4B05FF58005ACE2D26E9C108541C04;2170.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1213.
+ ) 
+Here is how much of TeX's memory you used:
+ 11575 strings out of 492616
+ 171164 string characters out of 6129480
+ 284846 words of memory out of 5000000
+ 15208 multiletter control sequences out of 15000+600000
+ 12505 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,17n,43p,688b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+19/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Appunti Algorithm design.pdf" (28 pages, 2924879 bytes).
+PDF statistics:
+ 503 PDF objects out of 1000 (max. 8388607)
+ 391 compressed objects within 4 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 417 words of extra memory for PDF output out of 10000 (max. 10000000)
+

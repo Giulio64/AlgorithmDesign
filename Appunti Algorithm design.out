@@ -1,0 +1,32 @@
+\BOOKMARK [1][-]{section.1}{Stable Matching}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{The Men-Wimen problem}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Asymptotic Order of Growth}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Brute Force}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Polynomial Running Time}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Big-O Notation}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.4}{Common Running Times}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.5}{Why it Matters}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.6}{The Heap Data Structure}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Greedy Algorithms}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{The Cashier Problem / Coin changing}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Interval Scheduling}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Interval Partitioning}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Minimizing The Lateness}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.5}{Dikstra Algorithm}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.6}{Kruskal Algorithm}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Dynamic Programming}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{Weighted Interval Scheduling}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.2}{Knapsack Problem}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.3}{Sequence Alignment}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.4}{Bellman-Ford}{section.4}% 21
+\BOOKMARK [1][-]{section.5}{Network Flow}{}% 22
+\BOOKMARK [2][-]{subsection.5.1}{The Maximum Flow Problem}{section.5}% 23
+\BOOKMARK [2][-]{subsection.5.2}{The maximum flow/ minimum cut relationship}{section.5}% 24
+\BOOKMARK [2][-]{subsection.5.3}{Ford-Fulkerson Algorithm}{section.5}% 25
+\BOOKMARK [2][-]{subsection.5.4}{Matching and Bipartite Matching}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.5}{Edge Disjointed Paths}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.6}{Circulation With demands}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.7}{Survey Design}{section.5}% 29
+\BOOKMARK [2][-]{subsection.5.8}{Airline Scheduling}{section.5}% 30
+\BOOKMARK [2][-]{subsection.5.9}{Project Selection}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.10}{Baseball Game}{section.5}% 32

@@ -1167,7 +1167,7 @@ The airline scheduling problem can be solved in $O(k^{3} log k)$ time, with k = 
 \end{claim}
 
 \begin{proof}
-The number c (of crews is uknown) we have $O(k)$ nodes and $O(k^{2})$ edges so, at most, k crews are needed and by solving the k-circulation problem with at most, k augmenting paths, we obtain $O(k^{3} log k)$ .
+The number c (of crews is unknown) we have $O(k)$ nodes and $O(k^{2})$ edges so, at most, k crews are needed and by solving the k-circulation problem with at most, k augmenting paths, we obtain $O(k^{3} log k)$ .
 \end{proof}
 
 \subsection{Project Selection}
@@ -1209,5 +1209,662 @@ Integrality theorem $\Rightarrow $ each remaining game between x and y added to 
 		\centering
 		\includegraphics[width=0.6\textwidth ]{baseballElimination}
 \end{figure}
+
+\clearpage
+
+\section{Randomized Algorithms}
+When designing an algorithm, introducing the concept of randomization allows for simplest, fastest, or only known algorithm for a particular problem.In practise it relies heavily on a random number generator (we must assure that the number generator used is truly random).
+
+\subsection{Contention Resolution}
+
+Given n processes (that can't comunicate between themself) $P_{1}, ..., P_{n}$, each competing for access to a shared database: if two or more processes access the database simultaneously, all processes are locked out.\\ Devise protocol to ensure all processes get through on a regular basis.\\\\
+For this particular problem does not exist a deterministic algorithm so we can either give to each process a timeslot at random or access/cannot access, note that every process must access in a finite amount of time.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.2\textwidth ]{processes}
+		\caption{Instance of the Content Resolution Problem}
+\end{figure}
+
+Each problem access with probability $p=\frac{1}{n}$, this is the value that maximize the event $Pr[S(i, t)]$ (probability that process i access the resource).Again let $S[i, t]$ = event that process i succeeds in accessing the database at time t,then:
+
+\[ \frac{1}{(e⋅n)} \leq Pr [S(i, t)] \leq \frac{1}{2n} \]
+
+with \emph{e} number of nepero, by independence we have:
+
+\[Pr [S(i, t)] = p(1 – p)^ {n – 1}.\]
+
+With p current process and 1-p all the other processes that attempts to access the resource, finally setting p = 1/n (value that maximize the event), we have:
+
+\[Pr [S(i, t)] = \frac{1}{n}(1 – \frac{1}{n})^ {n – 1}.\]
+
+This value is between $\frac{1}{e}$ and $\frac{1}{2}$.\\
+
+\begin{claim}
+The probability that process i fails to access the database in en rounds is at most $\frac{1}{e}$. After $en (c ln n)$ rounds, the probability $\leq n^{-c}$.
+\end{claim}\\
+
+\begin{proof}
+Let F[i, t] = event that process i fails to access database in rounds 1 through t. By independence and previous claim, we have $Pr [F[i, t]] \leq (1 – \frac{1}{en}) t$.
+\end{proof}\\
+
+\begin{claim}
+The probability that all processes succeed within 2e ⋅ n ln n rounds is $\geq 1 – \frac{1}{n}$.
+\end{claim}\\
+
+\begin{proof}
+Let F[t] = event that at least one of the n processes fails to access database in any of the rounds 1 through t:
+
+\[Pr[F[t]]=Pr[ \cup_{i=1} F[i,t]] \leq \sum_{i=1}^{n} Pr[F[i,t]] \leq n(1−\frac{1}{en})^{t}\]
+
+The above equality is obtained by using the \emph{Union Bound}:
+\[Given \; the \; events \; E_{1}, ..., E_{n}, Pr[\cup_{i=1}^{n}E_{i}] \leq \sum_{i=1}^{n}Pr[E_{i}]\]
+
+\end{proof}
+
+\subsection{Global Minimum Cut}
+Given a connected, undirected graph G=(V,E) find a cut (A, B) of minimum cardinality.\\
+
+\emph{The contraction algorithm}:\\
+Pick an edge e=(u,v) at random, then contract it:
+
+\begin{itemize}
+
+\item {replace u and v by single new super-node w}\\
+\item {preserve edges, updating endpoints of u and v to w}\\
+\item{keep parallel edges, but delete self-loop}\\
+
+\end{itemize}
+
+Repeat until graph has just two nodes u1 and v1 and return the cut.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{contract}
+		\caption{The contract operation on G=(V,E)}
+\end{figure}
+
+\begin{claim}
+The contraction algorithm returns a min cut with prob $\geq \frac{2}{n^{2}}$ in $\mathcal{O}(m log3 n)$ .
+\end{claim}\\
+
+\begin{proof}
+Consider a global min-cut (A*, B*) of G: Let F* be edges with one endpoint in A* and the other in B* with k = $| F^{*} |$ = size of min cut.\\
+In first step, algorithm contracts an edge in F* probability $\frac{k}{| E |}$. Every node has degree $\geq$ k since otherwise (A*, B*) would not be a min-cut $\Rightarrow$ $| E | \geq \frac{1}{2} k n ⇔ \frac{k}{| E |} \leq 2 / n$, thus, algorithm contracts an edge in F* with probability $\leq \frac{2}{n}$.
+\end{proof}\\
+
+To amplify the probability of success run the contraction algorithm many times (for a formal proof please check professor's slides).
+
+\subsection{Linearity of Expectation}
+
+Expectation. Given a discrete random variable X, its expectation E[X] is defined by:
+\[\sum_{j=0} ^{\infty}j Pr[X=j]\]
+
+For example, flipping a coin give me head with probability p, obviously it gives me tail with probability 1-p, how many independent flips X until first heads?
+
+\[E[X] = \sum_{j=0} ^{\infty}j (1-p)^{j-1}p = \frac{p}{1-p} \sum_{j=0} ^{\infty} (1-p)^{j} = \frac{p}{1-p} \frac{1-p}{p^{2}} = \frac{1}{p} \]
+
+\emph{Linearity of Expectations}:\\
+Given two random variables X and Y defined over the same probability space, E[X + Y] = E[X] + E[Y].\\
+
+\emph{Guessing the card}:\\
+Shuffle a deck of n cards; turn them over one at a time, try to guess each card (each card has uniform probability).\\
+
+\begin{claim}
+The expected number of correct guesses is Θ(log n).
+\end{claim}\\
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{card}
+\end{figure}
+
+\emph{Coupon Collector}:\\
+Each box of cereal contains a coupon, there are n different types of coupons. Assuming all boxes are equally likely to contain each coupon, how many boxes before you have $\geq$ 1 coupon of each type?
+
+\begin{claim}
+The expected number of correct guesses is Θ(nlog n).
+\end{claim}\\
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{coupon}
+\end{figure}
+
+\subsection{Monte Carlo vs Las Vegas Algorithms}
+
+\emph{Monte Carlo}: Guaranteed to run in poly-time, likely to find correct answer, ex: contraction algorithm.\\
+\emph{Las Vegas}:Guaranteed to find correct answer, likely to run in poly-time.(3-SAT randomized algorithm)\\
+
+It's always possible to convert a Las Vegas algorithm into Monte Carlo,but no known method (in general) to convert the other way.\\
+
+\emph{RP}:Decision problems solvable with one-sided error in poly-time; remark, one side error means: if the correct answer is no, always return no, if it is yes, return yes with probability $\geq \frac{1}{2}$\\\\
+\emph{ZPP:}Decision problems solvable in expected poly-time.\\
+
+\[ P \subseteq ZPP \subseteq RP \subseteq NP \]
+
+\subsection{Hashing}
+
+Given a universe U of possible elements, maintain a subset $S \subseteq U$ so that inserting, deleting, and searching in S is efficient, but U can be extremely large so defining an array of size $| U |$ is infeasible.
+The hash function is a way to generate a key to immediately identify an element inside a dictionary or encrypt a message:
+
+\[h : U \rightarrow \{ 0, 1, ..., n – 1 \}\]
+
+Create an array a of length n. When processing element u,access array element a[h(u)], a collision occurs when h(u) = h(v) but $u \neq v$ (is expected after Θ(√n)).\\
+Obviously it's possible to define deterministic methods for hashing but they are both inefficient ad insecure in real world, our ideal hash function hold the following properties:\\
+
+\begin{itemize}
+
+\item{Maps m elements uniformly at random to n hash slots.}
+\item{Running time depends on length of chains.}
+\item{Average length of chain = α = $\frac{m}{n}$.}
+\item{Choose n ≈ m ⇒ expect O(1) per insert, lookup, or delete.}
+
+\end{itemize}
+
+The best approach is to use randomization, defining the universal hash function family : $H = \{ h_{a} : a \in A \}$, then:
+
+\[h_{a}(x) = (\sum_{i=1}^{r}a_{i}x_{i}) mod \;p\]
+
+Choose p prime so that $m \leq p \leq 2m$, where m = $| S |$, so we have: Θ(m) space used, the expected number of collisions per operation is $\leq$ 1⇒ O(1) time per insert, delete, or lookup.
+
+\subsection{Marco-Finn Inequality}
+The probability of a deviation of the expectation over a factor c is at most $\frac{1}{c}$:
+\[ Pr(x>cE[x]) \leq \frac{1}{c}^{c}\]
+
+\subsection{Chernoff Bound}
+
+Random variable that describes the execution of an algorithm, it's equal to the sum of a set of random variables and related to the indipendent sampling of a phenomenon.
+
+\begin{claim}
+Suppose $X_{1}, ..., X_{n}$ are independent 0-1 random variables. Let $X = X_{1} + ... + X_{n}$. Then for any $μ \geq E[X]$ and for any $δ > 0$, we have:
+
+\[Pr[x>1+δ]μ <[\frac{e^{δ}}{1+δ^{1+δ}}]^{μ }\]
+\end{claim}
+
+\begin{claim}
+Suppose $X_{1}, ..., X_{n}$ are independent 0-1 random variables. Let $X = X_{1} + ... + X_{n}$. Then for any $μ \geq E[X]$ and for any $0<δ<1$, we have:
+
+\[Pr[x>1+δ]μ <e^{-δ^{2}\frac{μ}{2}}\]
+\end{claim}
+
+
+\subsection{Load Balancing}
+System in which m jobs arrive in a stream and need to be processed immediately on m identical processors, the jobs are assigned in a  Find an assignment that balances the workload across processors.
+
+\begin{itemize}
+\item{Centralized controller}
+Assign jobs in round-robin manner. Each processor receives at most $\frac{m}{n}$ jobs.
+\item{Decentralized controller}
+Assign jobs to processors uniformly at random. How likely is it that some processor is assigned “too many” jobs?
+
+\end{itemize}
+
+\emph{Notation:}
+
+\begin{itemize}
+\item{$X_{i}$ = number of jobs assigned to processor i.}
+\item{$Y_{ij} = 1$ if job j assigned to processor i, and 0 otherwise.}
+\end{itemize}
+
+We have $E[Yij] = \frac{1}{n}$, thus: $Xi = \sum Y_{ij}  ,$ and $μ = E[X_{i}] = 1$.\\\\
+Applying the Chernoff bound  with δ = c – 1 yields:
+
+\[ Pr[X_{i} > c] < \frac{e^{c-1}}{c^{c}}\]
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{job}
+\end{figure}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{jobTh}
+\end{figure}
+
+\clearpage
+
+\section{Negative Patterns}
+To use when we are dealing with algorithm that are unlikely to be solved with conventional tecniques.\\\\
+\emph{Objective}: Classify problems according to those that can be solved in polynomial-time and those that cannot. Given a black box or a Turing machine, does it stops in k steps? Unfortunately huge number of fundamental problems have defied classification for decades.
+
+\subsection{Polinomial Time Reduction}
+Suppose we could solve X in polynomial-time. What else could we solve in polynomial time?
+
+\[ X \leq_{p} Y\]
+
+\emph{Formal Definition}: Problem X polynomial reduces to problem Y if arbitrary instances of problem X can be solved using: polynomial number of standard computational steps + polynomial number of calls to oracle that solves problem Y.\\
+
+\emph{Practical Definition}: Problem X polynomial reduces to problem Y, If it's possible to transform the X problem instance into Y instance in polynomial time.
+
+\begin{itemize}
+\item{If $X \leq_{p} Y$ and Y can be solved in polynomial-time, then X can also be solved in polynomial time}
+\item{If $X \leq_{p} Y$ and X cannot be solved in polynomial-time, then Y cannot be solved in polynomial time}
+\item{If $X \leq_{p} Y$ and $Y \leq_{p} X$ then $X =_{p} Y$}
+\end{itemize}
+
+\subsection{Reduction by Equivalence}
+
+\emph{The indipendent set Problem}:\\
+
+Given a graph G = (V, E) and an integer k, is there a subset of vertices $S \subseteq V$ such that $|S| \geq k$, and for each edge at most one of its endpoints is in S?
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{indipendent}
+		\caption{An instance of Indipendent Set Problem}
+\end{figure}
+
+\emph{The vertex set Cover Problem}:\\
+
+Given a graph G = (V, E) and an integer k, is there a subset of vertices $S \subseteq V$ such that $|S| \leq k$, and for each edge, at least one of its endpoints is in S?
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{vertexCover}
+		\caption{An instance of Vertex Cover Problem}
+\end{figure}
+
+\begin{claim}
+VERTEX-COVER $≡_{P}$ INDEPENDENT-SET.
+\end{claim}\\
+
+\begin{proof}
+We show S is an independent set if V − S is a vertex cover.\\
+
+Let S be any independent set.
+\begin{itemize}
+
+\item{Consider an arbitrary edge (u, v).}
+\item{S independent ⇒ $u \notin S \; or \;v \notin S$ }
+\item{Thus, V − S covers (u, v)}.
+\end{itemize}
+
+Let V − S be any vertex cover.
+\begin{itemize}
+\item{Consider two nodes $u \in S$ and $v \in S$.}
+\item{Observe that (u, v) $\notin$ E since V − S is a vertex cover }
+\item{Thus, no two nodes in S are joined by an edge, S is an indipendent set}.
+\end{itemize}
+
+\end{proof}
+
+\subsection{Reduction from a special case to a general case}
+
+\emph{Set Cover}:
+Given a set U of elements, a collection $S_{1}, S_{2}, . . . , S_{m}$ of subsets of U, and an integer k, does there exist a collection of $\leq k$ of these sets whose union is equal to U?
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ]{setCover}
+		\caption{An instance of Set Cover Problem}
+\end{figure}
+
+\begin{claim}
+$VERTEX-COVER \leq_{p} SET-COVER$, this is also known as Karp reduction.
+\end{claim}\\
+
+\begin{proof}
+Given a VERTEX-COVER instance G = (V, E), k, we construct a set cover instance whose size equals the size of the vertex cover instance.
+\end{proof}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{vertexSet}
+		\caption{Transformation from Vertex-Cover to Set-Cover}
+\end{figure}
+
+\subsection{Reduction via Gadgets}
+
+\begin{itemize}
+\item{Literal: a Boolean variable or its negation: $x_{i} \; or x_{i}$}
+\item{Clause: A disjunction of literals: $C_{j} =x_{1} \land x_{2}  \land x_{3}$}
+\item{Conjunctive normal form:A propositional formula Φ that is the conjunction of clauses.$ Φ= C1 \lor C2 \lor C3 \lor C4$}
+\end{itemize}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{sat}
+\end{figure}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{indsat}
+\end{figure}
+
+\clearpage
+
+\section{NP Problems}
+
+\subsection{The decision Problems}
+X is a set of strings, given a string s an algorithm A solves problem X: A(s) = yes iff $s \in X$.\\\\
+\emph{Formal Definition}: Algorithm A runs in poly-time if for every string s, A(s) terminates in at most p(|s|) "steps", where p(⋅) is some polynomial.\\\\
+\emph{P-Problems}:  Decision problems for which there is a poly-time algorithm.\\\\
+\emph{Certifier}: Algorithm C(s, t) is a certifier for problem X if for every string s, $s \in X$ if there exists a string t such that C(s, t) = true.\\\\
+\emph{Practial Defintion of Certifier}: Given an instance of problem P and a solution S, it's possible to check in polynomial time that S is a solution for P.\\\\
+\emph{NP-Problems (Non-polynomial deterministic problems)}: Decision problems for which there exists a poly-time certifier.\\\\
+\emph{EXP-Problems (Exponential Problems)}: Decision problems for which there exists an exponential-time algorithm.\\\\
+
+\[P \subseteq NP \subseteq EXP\]
+
+The proof for the problem above is very simple: every problem in P has a certificate that can return true in polinomial time, NP has a certificate that return true in exponential time.
+
+\subsection{The Hamiltonian Cycle}
+Given an undirected graph G = (V, E), does there exist a simple cycle C that visits every node?A certificate could be a permutation of the n nodes, then the certifier checks in poly-time the permutation contains each node in V exactly once, and that there is an edge between each pair of adjacent nodes in the permutation. We can conclude that HAM-CYCLE is in NP.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{ham}
+		\caption{Hamiltonian Cycle certification.}
+\end{figure}
+
+\clearpage
+
+\subsection{NP Completeness}
+
+ A problem Y in NP with the property that for every problem X in NP, $X \leq _{p} Y$
+ 
+ \[NP \subseteq NP-Complete\]
+
+\emph{Definition}:Problem X polynomial reduces (Cook) to problem Y if arbitrary instances of problem X can be solved using:Polynomial number of standard computational steps + Polynomial number of calls to oracle that solves problem Y.\\
+
+\emph{Definition}:Problem X polynomial transforms (Karp) to problem Y if given any input x to X, we can construct an input y such that x is a yes instance of X if y is a true instance of Y.\\
+
+Polynomial transformation is polynomial reduction with just one call to oracle for Y, exactly at the end of the algorithm for X. Almost all previous reductions were of this form.
+
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth ]{npComplete}
+		\caption{Genealogy of most of the problems in NP}
+\end{figure}
+
+Fundamental NP-Complete Type of problems:
+\begin{itemize}
+\item{Packing problems: SET-PACKING, INDEPENDENT SET}
+\item{Covering problems: SET-COVER, VERTEX-COVER}
+\item{Constraint satisfaction problems: SAT, 3-SAT}
+\item{Sequencing problems: HAMILTONIAN-CYCLE, TSP}
+\item{Partitioning problems: 3D-MATCHING 3-COLOR}
+\item{Numerical problems: SUBSET-SUM, KNAPSACK.}
+\end{itemize}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\textwidth ]{NPSet}
+		\caption{Topology of NP problems}
+\end{figure}
+
+\clearpage
+
+\section{Approximation Algorithms}
+Supposing we want to solve an NP problem, what we should do? Sacrifice one of three desired features:
+
+\begin{itemize}
+\item{Polynomial time run}
+\item{Solves arbitrary instances of the problem}
+\item{Always returns the optimum}
+\end{itemize}
+
+The ρ-approximation algorithms resolves the first 2 problems while return the solution with a factor ρ from the optimum, the challenge is to prove that a solution is close to the optimum without even knowing the optimum.
+
+\begin{itemize}
+\item{Additive Approximation}: What we hope for: $SOL \leq OPT + C$ 
+\item{Costant Factor Approximation}: The most common: $SOL \leq OPT * C$
+\item{Polynomial Approximation Factor}: $SOL \leq (1+\epsilon)OPT $
+\end{itemize}
+
+\subsection{Load Balancing}
+We have m identical machines , n $\geq$ m jobs, job j has processing time $t_{j}$, every machine can process at most 1 process at a time, and one process, once started cannot be stopped.\\
+Let $S[i]$ be the subset of jobs assigned to the machine i,The load of machine i is L[i] = $\sum j \in S[i] t$, the makespan is the maximum load of every machine $L=max_{i}L_{i}$, our goal is to assign each job to a machine, in order to minimize the makespan.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{loadBalancing}
+		\caption{Instance of Load Balancing problem}
+\end{figure}
+
+\emph{The list-scheduling algorithm}
+Greedy algorithm that does the following: $\forall j \in J$ assign the job to the machine with the smallest amount of load.\\
+
+\begin{claim}
+The optimal makespan is $L^{*} \geq \frac{1}{m} \sum _{k} t_{k}$ 
+\end{claim}\\
+
+\begin{proof}
+The total processing time is $\sum_{k} t_{k}$ , so one of m machines must do at least a 1 / m fraction of total work.
+\end{proof}\\
+
+\begin{claim}
+The greedy algorithm is a 2-approximation algorithm.
+\end{claim}\\
+
+\begin{proof}
+Consider load L[i] of bottleneck machine i, let j be last job scheduled on machine when this job is assigned. the machine i has the smallest load, hence $L[i]– tj \leq L[k] \; for \; all \; 1 \leq k \leq m$.
+\end{proof}\\
+
+Is it possible to make an algorithm that get closer to the optimum? yes.\\
+\emph{Longest processing time (LPT)}: Sort n jobs in decreasing order of processing times; then run list scheduling algorithm.\\
+
+\begin{claim}
+LPT rule is a 3/2-approximation algorithm.
+\end{claim}\\
+
+\begin{proof}
+Consider load L[i] of bottleneck machine i and let j be last job scheduled on machine i:
+\[ L = L[i] = (L[i] -t_{j}) + t_{j} \leq \frac{3}{2} L^{*}\]
+There exist a more sophisticated analysis of this algorithm that bound the optimum at 4/3.
+\end{proof}
+
+\subsection{Center Selection Problem}
+We have a set of sites S and an integer k, select a set of k centers C so that maximum distance r(C) from a site to nearest center is minimized.\\\\
+Notation:
+\begin{itemize}
+\item{dist(x, y) = distance between sites x and y.}
+\item{dist($s_{i}$, C) = min $c \in C$ $dist(s_{i}, c)$ = distance from $s_{i}$ to closest center.}
+\item{r(C) = $max_{i} \; dist(s_{i}, C)$ = smallest covering radius.}
+\item{dist(x, x) = 0 (identity)} 
+\item{dist(x, y) = dist(y, x) (simmetry)} 
+\item{dist(x, y) $\leq$ dist(x, z) + dist(z, y) (triangle inequality)}
+
+\end{itemize}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{kCenter}
+		\caption{The k-center selection problem}
+\end{figure}
+
+\emph{Greedy Solution}: Put the first center at the best possible location for a single center, and then keep adding centers so as to reduce the covering radius each time by as much as possible (this solution is very bad).\\
+
+\begin{claim}
+Let $C^{*}$ be an optimal set of centers. Then r(C) $\leq$ 2r($C^{*}$)
+\end{claim}
+
+\begin{proof}
+\begin{itemize}
+\item{Assume $r(C^{*}) < 1/2 r(C)$}.
+\item{For each site $ci \in C$, consider ball of radius 1/2 r(C) around it. Exactly one $ci^{*}$ in each ball; let $c_{i}$ be the site paired with $ci^{*}$. Consider any site s and its closest center $ci^{*} ∈ C^{*}$}
+\item{$dist(s, C) \leq dist(s, ci) \leq dist(s, ci^{*}) + dist(ci_{*}, ci) \leq 2r(C^{*}).$}
+\item{Thus, $r(C) \leq 2r(C^{*})$}
+\end{itemize}
+\end{proof}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{kCenterDemonstration}
+\end{figure}
+
+\begin{claim}
+Unless P = NP, there no ρ-approximation for center selection problem for any $ρ < 2$.
+\end{claim}\\
+
+\begin{proof}
+We show how we could use a (2 – ε) approximation algorithm for CENTER-SELECTION selection to solve DOMINATING-SET in poly-time:
+\begin{itemize}
+\item{Let G = (V, E), k be an instance of DOMINATING-SET (a dominating set for a graph G = (V, E) is a subset D of V such that every vertex not in D is adjacent to at least one member of D)}
+\item{Construct instance $G^{'}$ of CENTER-SELECTION with sites V and distances}
+\item{$dist(u, v) = 1 if (u, v) \in E$ $dist(u, v) = 2 if (u, v) \notin E$}
+\item{Note that $G^{'}$ satisfies the triangle inequality.}
+\item{G has dominating set of size k if there exists k centers C* with r(C*) = 1.}
+\end{itemize}
+
+Thus, if G has a dominating set of size k, a (2 – ε)approximation algorithm for CENTER-SELECTION would find a solution C* with r(C*) = 1 since it cannot use any edge of distance 2.
+\end{proof}
+
+\subsection{Knapsack Problem}
+PTAS: (1 + ε)-approximation algorithm for any constant ε > 0, produces arbitrarily high quality solution, but trades off accuracy for time.\\\\
+The knapsack problem is the same as seen 4.2, in general we get further from the desired value while respecting the weight limit W:\\\\
+Given a set X, weights wi ≥ 0, values vi ≥ 0, a weight limit W, and a target value V, is there a subset S ⊆ X such that:
+
+\[\begin{cases} \sum_{i \in S} w_{i} \leq W \\  \sum_{i \in S} v_{i} \geq V \end{cases}\]
+
+\begin{claim}
+SUBSET-SUM $\leq _{p}$ KNAPSACK
+\end{claim}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{NPKnapsack}
+		\caption{Knapsack problem reduction}
+\end{figure}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{knapsackII}
+		
+\end{figure}
+ The approximation should do the following: round all values up to lie in smaller range, then run dynamic programming algorithm II on rounded/scaled instance.
+ 
+ \begin{itemize}
+ \item{$0<ε\leq1$ it's the precision parameter}
+ \item{$v_{max}$ is the largest value of the original instances}
+ \item{$\theta$ = scaling factor }
+ \end{itemize}
+ 
+ Observation. Optimal solutions to problem with v are equivalent to the optimal solution v*.
+ 
+ For any ε $>$ 0, the rounding algorithm computes a feasible solution whose value is within a (1 + ε) factor of the optimum in O(n3 / ε) time.
+ 
+ \clearpage
+ 
+ \section{Linear Programming and Integer Linear Programming}
+ 
+ \subsection{Linear Programming}
+ 
+ Linear programming is about satisfying a list of constraints rappresented by some equations, the general formula being:
+ 
+ \[min/max \; c^{t}x\]
+ \[\begin{cases} Ax \geq b \\ x \geq 0 \; or \; x \leq 0 \end{cases}\]
+ 
+where $c^{t}x$ is the objective function that could either be maximized or minimized, A is a matrix $m \; x \; n$ and the variables $x_{i}$ could either be positive or negative, there exists many algorithms to solve LP problems in poly-time, the most famous is the simplex algorithm or the graphic method(please note that, in order to use the graphic method, you must have 2 variables maximum in the problem).
+ 
+ \subsection{Primal-Dual}
+supposing we have a primal problem in the form of:
+
+  \[min \; c^{t}x\]
+ \[\begin{cases} Ax \geq b \\ x \geq 0 \end{cases}\]
+ 
+ the the dual problem will be:
+ 
+ \[max \; b^{t}y\]
+ \[\begin{cases} A^{t}y \leq c \\ y \geq 0 \end{cases}\]
+ 
+ The objective function change from maximize to minimize and vice-versa, while the matrix inequalities changes to the opposite from the primal to the dual, a practical example:
+ 
+ \[min \; 7x1 + x2 + 5x3\]
+ \[\begin{cases} x1-x2+3x3 \geq 10 \\ 5x1+2x2-x3 \geq 6 \\ x1,x2,x3 \geq 0 \end{cases}\]
+ 
+ becomes:
+ 
+ \[max \; 10y1 + 6y2\]
+ \[\begin{cases} y1+5y2 \leq 7 \\ -y1 + 2y2 \leq 1 \\ 3y1-y2 \leq 5 \\y1,y2 \geq 0 \end{cases}\]
+ 
+Why are there so important?\\
+
+\emph{Primal-Dual Weak Theorem}: If x is feasible for the Primal and y is feasible for the Dual, then:
+
+\[ \sum^{n}_{j=1} c_{j}x_{j} \geq \sum^{m}_{i=1}b_{i}y_{i}\]
+
+basically the solution of the primal is always greater than the solution of the dual.\\\\
+\emph{Primal-Dual Strong Theorem}: If the Primal has finite optimum then the Dual has finite optimum. Let $x^{∗}$ and $y^{∗}$ be the primal and the dual optimum solutions. Then:
+
+\[ \sum^{n}_{j=1} c_{j}x_{j}^{*} = \sum^{m}_{i=1}b_{i}y_{i}^{*}\]
+
+\subsection{Integer Linear Programming}
+
+Same as linear programming, but this time x variables can only be either 1 or 0:
+
+\[min \; c^{t}x\]
+\[\begin{cases} Ax \geq 1 \\ x = \{0,1\} \end{cases}\]
+ 
+Unfortunately it does not exists a poly-time algorithm to solve ILP problems.\\
+
+\emph{Transformation from ILP to LP}: in order to transform an ILP problem to LP we need to use a process called relaxation, so we need to transform the original ILP problem into:
+
+ \[min \; c^{t}x\]
+\[\begin{cases} Ax \geq 1 \\ x = [0,1] \end{cases}\]
+
+\emph{Transformation from LP to ILP}: in order to transform an LP problem to ILP we need to use a process called rounding: given the solution of LP problem, we need to round some values to 1 or to 0, a simple method will be $x_{ILP} = 1 \; if \; x_{LP} \geq 1/2$ and $x_{ILP} = 0 \; if \; x_{LP} \leq 1/2$ but there also exists some more sophisticated methods involving probabilities.\\
+
+\emph{Integrality Gap}: largest ratio on all instances between the optimum integral solution and the optimum relaxed solution.
+
+\subsection{Weighted Vertex Cover with ILP}
+
+Given a graph G = (V, E) with vertex weights $w_{i} \geq 0$, find a min-weight subset of vertices $S \subseteq V$ such that every edge is incident to at least one vertex in S.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ]{wVertexCover}
+		\caption{Instance of weighted vertex cover}
+\end{figure}
+
+So in order to formulate the problem, we assign to the variable $x_{i}$ 1 if is in the vertex cover, 0 if not, while the objective function is to minimize $\sum_{i} w_{i}x_{i}$.
+
+
+ \[min \; \sum_{i} w_{i}x_{i}\]
+\[\begin{cases} x_{i} + x_{j} \geq 1 \; \forall (i,j) \in E \\ x = \{0,1\} \; \forall i \in V\end{cases}\]
+
+obviously $x_{i}+x_{j} \geq 1$ because if I take the vertex i, i must also take the vertex j, in order to solve the problem we need to relax it:
+
+ \[min \; \sum_{i} w_{i}x_{i}\]
+\[\begin{cases} x_{i} + x_{j} \geq 1 \; \forall (i,j) \in E \\ x \geq 0 \; \forall i \in V\end{cases}\]
+
+So, as said before, we need to round the fractional values in the LP solution, if $x \geq 1/2 \Rightarrow x^{*} = 1$ else $x \leq 1/2 \Rightarrow x^{*} = 0$
+
+\begin{claim}
+The rounded LP solution is a 2approximation for the optimum ILP solution.
+\end{claim}
+
+\begin{proof}
+Let $S^{*}$ be optimal vertex cover. Then:
+\[\sum_{i \in S^{*}} w_{i} \geq \sum_{i \in S}w_{i}x_{i}^{*} \geq 1/2 \sum_{i \in S}w_{i}\]
+\end{proof}
+
+\subsection{Generalized Load Balancing}
+Same as 9.1 but this time, not all machines are authorized: job $j \in J$ must run contiguously on an authorized machine in $M_{j} \subseteq M$, being $x_{ij}$ the times the machine i spends processing the job j:
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{gILP}
+\end{figure}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ]{gLP}
+\end{figure}
+
+\begin{claim}
+The optimal makespan $L^{*} ≥ max_{j} t_{j}$
+\end{claim}
+\begin{proof}
+Some machine must process the most time-consuming job
+\end{proof}\\
+\begin{claim}
+Let L be optimal value to the LP. Then, optimal makespan $L^{*} \geq L$.
+\end{claim}\\
+\begin{proof}
+LP has fewer constraints than ILP formulation.
+\end{proof}
 
 \end{document}

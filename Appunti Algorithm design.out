@@ -30,3 +30,31 @@
 \BOOKMARK [2][-]{subsection.5.8}{Airline Scheduling}{section.5}% 30
 \BOOKMARK [2][-]{subsection.5.9}{Project Selection}{section.5}% 31
 \BOOKMARK [2][-]{subsection.5.10}{Baseball Game}{section.5}% 32
+\BOOKMARK [1][-]{section.6}{Randomized Algorithms}{}% 33
+\BOOKMARK [2][-]{subsection.6.1}{Contention Resolution}{section.6}% 34
+\BOOKMARK [2][-]{subsection.6.2}{Global Minimum Cut}{section.6}% 35
+\BOOKMARK [2][-]{subsection.6.3}{Linearity of Expectation}{section.6}% 36
+\BOOKMARK [2][-]{subsection.6.4}{Monte Carlo vs Las Vegas Algorithms}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.5}{Hashing}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.6}{Marco-Finn Inequality}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.7}{Chernoff Bound}{section.6}% 40
+\BOOKMARK [2][-]{subsection.6.8}{Load Balancing}{section.6}% 41
+\BOOKMARK [1][-]{section.7}{Negative Patterns}{}% 42
+\BOOKMARK [2][-]{subsection.7.1}{Polinomial Time Reduction}{section.7}% 43
+\BOOKMARK [2][-]{subsection.7.2}{Reduction by Equivalence}{section.7}% 44
+\BOOKMARK [2][-]{subsection.7.3}{Reduction from a special case to a general case}{section.7}% 45
+\BOOKMARK [2][-]{subsection.7.4}{Reduction via Gadgets}{section.7}% 46
+\BOOKMARK [1][-]{section.8}{NP Problems}{}% 47
+\BOOKMARK [2][-]{subsection.8.1}{The decision Problems}{section.8}% 48
+\BOOKMARK [2][-]{subsection.8.2}{The Hamiltonian Cycle}{section.8}% 49
+\BOOKMARK [2][-]{subsection.8.3}{NP Completeness}{section.8}% 50
+\BOOKMARK [1][-]{section.9}{Approximation Algorithms}{}% 51
+\BOOKMARK [2][-]{subsection.9.1}{Load Balancing}{section.9}% 52
+\BOOKMARK [2][-]{subsection.9.2}{Center Selection Problem}{section.9}% 53
+\BOOKMARK [2][-]{subsection.9.3}{Knapsack Problem}{section.9}% 54
+\BOOKMARK [1][-]{section.10}{Linear Programming and Integer Linear Programming}{}% 55
+\BOOKMARK [2][-]{subsection.10.1}{Linear Programming}{section.10}% 56
+\BOOKMARK [2][-]{subsection.10.2}{Primal-Dual}{section.10}% 57
+\BOOKMARK [2][-]{subsection.10.3}{Integer Linear Programming}{section.10}% 58
+\BOOKMARK [2][-]{subsection.10.4}{Weighted Vertex Cover with ILP}{section.10}% 59
+\BOOKMARK [2][-]{subsection.10.5}{Generalized Load Balancing}{section.10}% 60

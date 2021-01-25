@@ -1,0 +1,109 @@
+\section{Negative Patterns}
+To use when we are dealing with algorithm that are unlikely to be solved with conventional tecniques.\\\\
+\emph{Objective}: Classify problems according to those that can be solved in polynomial-time and those that cannot. Given a black box or a Turing machine, does it stops in k steps? Unfortunately huge number of fundamental problems have defied classification for decades.
+
+\subsection{Polinomial Time Reduction}
+Suppose we could solve X in polynomial-time. What else could we solve in polynomial time?
+
+\[ X \leq_{p} Y\]
+
+\emph{Formal Definition}: Problem X polynomial reduces to problem Y if arbitrary instances of problem X can be solved using: polynomial number of standard computational steps + polynomial number of calls to oracle that solves problem Y.\\
+
+\emph{Practical Definition}: Problem X polynomial reduces to problem Y, If it's possible to transform the X problem instance into Y instance in polynomial time.
+
+\begin{itemize}
+    \item{If $X \leq_{p} Y$ and Y can be solved in polynomial-time, then X can also be solved in polynomial time}
+    \item{If $X \leq_{p} Y$ and X cannot be solved in polynomial-time, then Y cannot be solved in polynomial time}
+    \item{If $X \leq_{p} Y$ and $Y \leq_{p} X$ then $X =_{p} Y$}
+\end{itemize}
+
+\subsection{Reduction by Equivalence}
+
+\emph{The indipendent set Problem}:\\
+
+Given a graph G = (V, E) and an integer k, is there a subset of vertices $S \subseteq V$ such that $|S| \geq k$, and for each edge at most one of its endpoints is in S?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth ]{indipendent}
+    \caption{An instance of Indipendent Set Problem}
+\end{figure}
+
+\emph{The vertex set Cover Problem}:\\
+
+Given a graph G = (V, E) and an integer k, is there a subset of vertices $S \subseteq V$ such that $|S| \leq k$, and for each edge, at least one of its endpoints is in S?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth ]{vertexCover}
+    \caption{An instance of Vertex Cover Problem}
+\end{figure}
+
+\begin{claim}
+    VERTEX-COVER $≡_{P}$ INDEPENDENT-SET.
+\end{claim}\\
+
+\begin{proof}
+    We show S is an independent set if V − S is a vertex cover.\\
+
+    Let S be any independent set.
+    \begin{itemize}
+
+        \item{Consider an arbitrary edge (u, v).}
+        \item{S independent ⇒ $u \notin S \; or \;v \notin S$ }
+        \item{Thus, V − S covers (u, v)}.
+    \end{itemize}
+
+    Let V − S be any vertex cover.
+    \begin{itemize}
+        \item{Consider two nodes $u \in S$ and $v \in S$.}
+        \item{Observe that (u, v) $\notin$ E since V − S is a vertex cover }
+        \item{Thus, no two nodes in S are joined by an edge, S is an indipendent set}.
+    \end{itemize}
+
+\end{proof}
+
+\subsection{Reduction from a special case to a general case}
+
+\emph{Set Cover}:
+Given a set U of elements, a collection $S_{1}, S_{2}, . . . , S_{m}$ of subsets of U, and an integer k, does there exist a collection of $\leq k$ of these sets whose union is equal to U?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth ]{setCover}
+    \caption{An instance of Set Cover Problem}
+\end{figure}
+
+\begin{claim}
+    $VERTEX-COVER \leq_{p} SET-COVER$, this is also known as Karp reduction.
+\end{claim}\\
+
+\begin{proof}
+    Given a VERTEX-COVER instance G = (V, E), k, we construct a set cover instance whose size equals the size of the vertex cover instance.
+\end{proof}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth ]{vertexSet}
+    \caption{Transformation from Vertex-Cover to Set-Cover}
+\end{figure}
+
+\subsection{Reduction via Gadgets}
+
+\begin{itemize}
+    \item{Literal: a Boolean variable or its negation: $x_{i} \; or x_{i}$}
+    \item{Clause: A disjunction of literals: $C_{j} =x_{1} \land x_{2}  \land x_{3}$}
+    \item{Conjunctive normal form:A propositional formula Φ that is the conjunction of clauses.$ Φ= C1 \lor C2 \lor C3 \lor C4$}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth ]{sat}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth ]{indsat}
+\end{figure}
+
+\clearpage
